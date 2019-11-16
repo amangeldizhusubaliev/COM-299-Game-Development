@@ -1,0 +1,7 @@
+# Ignore everything
+*
+
+# Except
+!.gitignore
+!README.md
+!*/Project1/practice1/Assets/BallController.cs
