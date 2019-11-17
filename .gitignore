@@ -1,7 +1,4 @@
-# Ignore everything
-*
-
-# Except
+/*
 !.gitignore
 !README.md
-!*\BallController.cs
+!/Assets/BallController.cs
