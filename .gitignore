@@ -4,4 +4,4 @@
 # Except
 !.gitignore
 !README.md
-!*/Assets/BallController.cs
+!*\BallController.cs
