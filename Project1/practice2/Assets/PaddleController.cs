@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class SecondPaddleController : MonoBehaviour
+public class PaddleController : MonoBehaviour
 {
     public float PaddleForceScale = 100;
     private Rigidbody RigidBody;
@@ -12,7 +12,7 @@ public class SecondPaddleController : MonoBehaviour
 
     void FixedUpdate()
     {
-        float Delta = Input.GetAxis("SecondPlayer");
+        float Delta = Input.GetAxis("Horizontal");
 
         Vector3 force = new Vector3(0, 0, Delta) * 
             PaddleForceScale;

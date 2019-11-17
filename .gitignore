@@ -14,5 +14,4 @@
 !/Project1/practice2/Assets/
 /Project1/practice2/Assets/*
 !/Project1/practice2/Assets/BallController.cs
-!/Project1/practice2/Assets/FirstPaddleController.cs
-!/Project1/practice2/Assets/SecondPaddleController.cs
+!/Project1/practice2/Assets/PaddleController.cs
