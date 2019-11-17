@@ -1,5 +1,10 @@
-*
+/*
 !.gitignore
 !README.md
+!/Project1/
+/Project1/*
+!/Project1/practice1/
+/Project1/practice1/*
+!/Project1/practice1/Assets/
 /Project1/practice1/Assets/*
 !/Project1/practice1/Assets/BallController.cs
