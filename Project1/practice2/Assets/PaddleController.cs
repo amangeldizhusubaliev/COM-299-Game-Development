@@ -29,8 +29,8 @@ public class PaddleController : MonoBehaviour
         {
             GameObject ball = collision.gameObject;
 
-            float shift = ball.transform.position.x - 
-                transform.position.x;
+            float shift = ball.transform.position.z - 
+                transform.position.z;
 
             Vector3 force = new Vector3(shift, 0, 0) * 
                 ForceAppliedToBallScale;
