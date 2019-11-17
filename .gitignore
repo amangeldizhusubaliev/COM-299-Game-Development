@@ -8,3 +8,11 @@
 !/Project1/practice1/Assets/
 /Project1/practice1/Assets/*
 !/Project1/practice1/Assets/BallController.cs
+
+!/Project1/practice2/
+/Project1/practice2/*
+!/Project1/practice2/Assets/
+/Project1/practice2/Assets/*
+!/Project1/practice2/Assets/BallController.cs
+!/Project1/practice2/Assets/FirstPaddleController.cs
+!/Project1/practice2/Assets/SecondPaddleController.cs
