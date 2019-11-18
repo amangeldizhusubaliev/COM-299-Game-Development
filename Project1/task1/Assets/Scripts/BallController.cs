@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
@@ -15,31 +17,53 @@ public class BallController : MonoBehaviour
     private Rigidbody RigidBody;
     private AudioSource audioSource;
 
+    public float PauseOnStart = 3.5f;
+    
+    private bool isCoroutineExecuting = false;
+
+    IEnumerator ExecuteAfterTime(float time, Action task)
+    {
+        if (isCoroutineExecuting)
+        {
+            yield break;
+        }
+
+        isCoroutineExecuting = true;
+        yield return new WaitForSeconds(time);
+        task();
+        isCoroutineExecuting = false;
+    }
+
     void Start()
     {
         RigidBody = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
-        
+
         if (LastPlayer != -1)
         {
             audioSource.PlayOneShot(BallOutOfBounds);
-        } else
+        }
+        else
         {
-            LastPlayer = Random.Range(0, 1) < 0.5 ? 1 : 2;
+            LastPlayer = UnityEngine.Random.Range(0, 1) < 0.5 ? 1 : 2;
         }
 
-        if (LastPlayer == 1)
+        StartCoroutine(ExecuteAfterTime(PauseOnStart, () =>
         {
-            BallInitalAngle = Random.Range(-45, -135);
-        } else
-        {
-            BallInitalAngle = Random.Range(45, 135);
-        }
+            if (LastPlayer == 1)
+            {
+                BallInitalAngle = UnityEngine.Random.Range(-45, -135);
+            }
+            else
+            {
+                BallInitalAngle = UnityEngine.Random.Range(45, 135);
+            }
 
-        Vector3 force = Quaternion.Euler(0, BallInitalAngle, 0) *
-            Vector3.forward * BallForceScale;
+            Vector3 force = Quaternion.Euler(0, BallInitalAngle, 0) *
+                Vector3.forward * BallForceScale;
 
-        RigidBody.AddForce(force);
+            RigidBody.AddForce(force);
+        }));
     }
 
     float GetRigidBodyVelocity()

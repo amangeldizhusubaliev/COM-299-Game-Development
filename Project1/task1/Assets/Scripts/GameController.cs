@@ -35,6 +35,7 @@ public class GameController : MonoBehaviour
             }
 
             ball.GetComponent<BallController>().LastPlayer = LastPlayer;
+            ball.GetComponent<BallController>().PauseOnStart = 0.5f;
 
             Instantiate(ball, new Vector3(0, 0.5f, 0), Quaternion.identity);
 
