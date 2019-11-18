@@ -25,3 +25,12 @@
 !/Project1/practice3/Assets/PaddleController.cs
 !/Project1/practice3/Assets/GameController.cs
 
+!/Project1/task1/
+/Project1/task1/*
+!/Project1/task1/Assets/
+/Project1/task1/Assets/*
+!/Project1/task1/Assets/Scripts/
+/Project1/task1/Assets/Scripts/*
+!/Project1/task1/Assets/Scripts/BallController.cs
+!/Project1/task1/Assets/Scripts/PaddleController.cs
+!/Project1/task1/Assets/Scripts/GameController.cs
